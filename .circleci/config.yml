@@ -19,7 +19,9 @@ jobs:
           working_directory: ~/project/App.Tests
           name: Run tests
           command: |
-            dotnet test
+            dotnet restore
+            dotnet build
+            dotnet publish -o publish
             
 
 workflows:
